@@ -1,0 +1,24 @@
+SERIALIZATION AND RELATIONSHIPS 
+
+Use SQLAlchemy-serializer to convert SQLAlchemy object with realtionships into dictionaries
+
+Serialization is the process of converting programmatic data such as pyhton object to a sequence of bytes that can be shred with t
+other programs computers or networks.
+
+deseialization is the opposite or the reverse process of converting a sequence of byts back to programmatic data.
+
+in our previous lession we saw how to serilize SQLAlchemy model into a dictionary.
+in this lesson, well serialize models that have realtionships
+we will use serilization rules to include or exclude attributes to avoid issues eith nested models and inifinite recursion.
+
+SerializerMixin 
+this is a powerful class in SQLAlchemy-Serializer that allows developwers to quickly add serilization capabilities to their
+SQLAlchemy models.
+
+
+when a model class inherits SerializerMixin it gaind a range of methods for serializing and deserialing data.
+the methods include to_dict(), which convert the model object into a dictionary and to_json() which converts it into a JSON string.
+
+this means that SerializerMixin simplifies th process of data serialization by adding a set of predefined mehtods to SQLAlchemy models.
+developers can format these methods as neede to achieve their desired serialization format, and can use them to quicly transform complex database models into 
+simpler more usable data strucutes.
